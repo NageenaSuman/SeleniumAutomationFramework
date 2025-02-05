@@ -9,7 +9,7 @@ import org.openqa.selenium.edge.EdgeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
 
-public class driverManager {
+public class driverManager_SelenoidGrid {
     public static WebDriver driver;
     // it is responsible to share browser, initiate it and terminate it
     // Getter Setter
@@ -18,7 +18,7 @@ public class driverManager {
     }
 
     public static void setDriver(WebDriver driver) {
-        driverManager.driver = driver;
+        driverManager_SelenoidGrid.driver = driver;
     }
     public static void initiate(){
         String browser = PropertyReader.readKeys("browser");
