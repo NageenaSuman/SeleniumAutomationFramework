@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+
+
+    <listeners>
+        <listener class-name="org.nageena.Listeners.RetryListeners"/>
+    </listeners>
+
+
+    <test verbose="2" preserve-order="true"
+          name="C:/Users/Nageena Suman PK/IdeaProjects/SeleniumAutomationFramework/src/test">
+
+        <classes>
+            <class name="org.nageena.tests.vwoTC.LoginPageTest_08_AllwithLoggerandListeners">
+            </class>
+        </classes>
+    </test>
+</suite>

@@ -8,7 +8,7 @@ import java.util.Properties;
 public class PropertyReader {
     public static String readKeys(String Key){
         try {
-        FileInputStream io = new FileInputStream(System.getProperty("user.dir") + "/src/main/java/Resources/Data.properties");
+        FileInputStream io = new FileInputStream(System.getProperty("user.dir") + "/src/main/resources/Data.properties");
             Properties p = new Properties();
             p.load(io);
             return p.getProperty(Key);
