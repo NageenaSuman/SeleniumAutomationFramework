@@ -1,6 +1,7 @@
 package org.nageena.base;
 
 import org.nageena.Utils.PropertyReader;
+import org.nageena.pages.PageFactory.LoginPage_PF;
 import org.openqa.selenium.By;
 import org.nageena.driver.driverManager;
 import org.openqa.selenium.WebElement;
@@ -20,17 +21,30 @@ public class CommonToAllPages {
         driverManager.getDriver().get(PropertyReader.readKeys("url"));
 
     }
-
+    // for POM
     public void click(By by){
         driverManager.getDriver().findElement(by).click();
     }
-
+    // for PageFactory
+    public void click(WebElement by){
+        by.click();
+    }
+    // for POM
     public void enterInput(By by, String key){
         driverManager.getDriver().findElement(by).sendKeys(key);
     }
-
+    // for PageFactory
+    public void enterInput(WebElement by, String key){
+        by.sendKeys(key);
+    }
+    // for POM
     public String get_text(By by){
         return driverManager.getDriver().findElement(by).getText();
+
+    }
+    // for PageFactory
+    public String get_text(WebElement by){
+        return by.getText();
 
     }
 
@@ -49,6 +63,11 @@ public class CommonToAllPages {
     public WebElement visibilityOfElement(By elementLocation) {
         return new WebDriverWait(driverManager.getDriver(), Duration.ofSeconds(20)).until(ExpectedConditions.visibilityOfElementLocated(elementLocation));
     }
+    // for PageFactory
+
+    //public WebElement visibilityOfElement(WebElement elementLocation) {
+        //return new WebDriverWait(driverManager.getDriver(), Duration.ofSeconds(50)).until(ExpectedConditions.visibilityOfElementLocated((By) elementLocation));
+  // }
 
     public WebElement getElement(By key) {
         return driverManager.getDriver().findElement(key);

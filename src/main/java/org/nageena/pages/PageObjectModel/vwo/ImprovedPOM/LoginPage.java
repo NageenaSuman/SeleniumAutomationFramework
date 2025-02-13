@@ -15,6 +15,7 @@ public class LoginPage extends CommonToAllPages {
     //constructor
 
     public LoginPage(WebDriver driver) {
+
         this.driver = driver;
     }
 
